@@ -1,0 +1,73 @@
+@import "./colors";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.8rem;
+}
+
+.main {
+  height: 100vh;
+  background: $dark-cyan url("../images/bg-pattern-top.svg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.card {
+  width: 325px;
+  background: white;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+
+  &__header {
+    height: 140px;
+    background: url("../images/bg-pattern-card.svg");
+  }
+
+  &__person {
+    position: relative;
+    &-box {
+      width: 100px;
+      height: 100px;
+      border: 5px solid white;
+      border-radius: 50%;
+      overflow: hidden;
+      //   position: absolute;
+      //   top: calc(50%);
+      //   left: calc(50%);
+      //   transform: translate(-50%, -50%);
+      //   margin: -25px auto 30px auto;
+      margin: -50px auto 30px auto;
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+  }
+}
+
+// footer
+// .attribution {
+//   font-size: 11px;
+//   text-align: center;
+// }
+
+// .attribution a {
+//   color: hsl(228, 45%, 44%);
+// }
