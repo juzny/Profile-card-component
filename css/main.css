@@ -17,8 +17,8 @@ body {
 }
 
 .main {
-  height: 100vh;
-  background: #19a2ae url("../images/bg-pattern-top.svg");
+  height: 95vh;
+  background: #19a2ae;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,10 +28,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
   position: relative;
 }
 
 .card {
+  position: relative;
   width: 325px;
   background: white;
   background-size: cover;
@@ -43,10 +45,6 @@ body {
 .card__header {
   height: 140px;
   background: url("../images/bg-pattern-card.svg");
-}
-
-.card__person {
-  position: relative;
 }
 
 .card__person-box {
@@ -62,5 +60,98 @@ body {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.card__person-name {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.card__numbers {
+  margin-top: 30px;
+  padding: 20px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid #969696;
+}
+
+.card__numbers-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__numbers-item .option {
+  font-size: 1.4rem;
+  margin-top: 0.8rem;
+}
+
+.card__person-age,
+.card__person-city,
+.option {
+  font-weight: 400;
+  color: #6a6f81;
+  letter-spacing: 1px;
+}
+
+.circles__top, .circles__bottom {
+  position: absolute;
+  width: 100%;
+}
+
+.circles__top {
+  top: -25%;
+  left: -40%;
+}
+
+.circles__bottom {
+  bottom: -25%;
+  right: -40%;
+}
+
+.footer {
+  position: relative;
+  height: 5vh;
+}
+
+.footer__attribution {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+}
+
+.footer__attribution a {
+  color: #3e52a3;
+}
+
+@media (min-width: 768px) {
+  .circles__top, .circles__bottom {
+    width: 90%;
+  }
+  .circles__top {
+    top: -50%;
+    left: -60%;
+  }
+  .circles__bottom {
+    bottom: -50%;
+    right: -60%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

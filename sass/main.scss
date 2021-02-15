@@ -18,15 +18,17 @@ body {
 }
 
 .main {
-  height: 100vh;
-  background: $dark-cyan url("../images/bg-pattern-top.svg");
+  height: 95vh;
+  background: $dark-cyan;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   position: relative;
 }
 
 .card {
+  position: relative;
   width: 325px;
   background: white;
   background-size: cover;
@@ -40,34 +42,109 @@ body {
   }
 
   &__person {
-    position: relative;
+    // position: relative;
     &-box {
       width: 100px;
       height: 100px;
       border: 5px solid white;
       border-radius: 50%;
       overflow: hidden;
-      //   position: absolute;
-      //   top: calc(50%);
-      //   left: calc(50%);
-      //   transform: translate(-50%, -50%);
-      //   margin: -25px auto 30px auto;
       margin: -50px auto 30px auto;
+      //   position: absolute;
+      //   top: 50%;
+      //   left: 50%;
+      //   transform: translate(-50%, -75px);
+
       img {
         width: 100%;
         height: auto;
         display: block;
       }
     }
+
+    &-name {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+  }
+  &__numbers {
+    margin-top: 30px;
+    padding: 20px 30px;
+    display: flex;
+    border-top: 1px solid $dark-gray;
+    &-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .option {
+        font-size: 1.4rem;
+        margin-top: 0.8rem;
+      }
+    }
+  }
+}
+
+.card__person-age,
+.card__person-city,
+.option {
+  font-weight: 400;
+  color: $dark-grayish-blue;
+  letter-spacing: 1px;
+}
+
+.circles {
+  &__top,
+  &__bottom {
+    position: absolute;
+    width: 100%;
+  }
+
+  &__top {
+    top: -25%;
+    left: -40%;
+  }
+
+  &__bottom {
+    bottom: -25%;
+    right: -40%;
   }
 }
 
 // footer
-// .attribution {
-//   font-size: 11px;
-//   text-align: center;
-// }
+.footer {
+  position: relative;
+  height: 5vh;
+  &__attribution {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
 
-// .attribution a {
-//   color: hsl(228, 45%, 44%);
-// }
+    a {
+      color: $blue;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .circles {
+    &__top,
+    &__bottom {
+      width: 90%;
+    }
+
+    &__top {
+      top: -50%;
+      left: -60%;
+    }
+
+    &__bottom {
+      bottom: -50%;
+      right: -60%;
+    }
+  }
+}
